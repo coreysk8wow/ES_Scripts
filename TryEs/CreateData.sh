@@ -11,9 +11,9 @@ curl 'localhost:9200/ls/user/2?pretty' -d '{
 }'
 
 curl -XPOST $ESADDR/_bulk?pretty -d '
-{ "index" : { "_index" : "ls", "_type" : "user", "_id" : "3" } }
+{ "index" : { "_index" : "ls", "_type" : "user", "_id" : "1" } }
 { "name" : "刘顺", "name_en" : "LIU Shun" }
-{ "index" : { "_index" : "ls", "_type" : "user", "_id" : "3" } }
+{ "index" : { "_index" : "ls", "_type" : "user", "_id" : "2" } }
 { "name" : "爱因斯坦", "name_en" : "Albert Einstein" }
 { "index" : { "_index" : "ls", "_type" : "user", "_id" : "3" } }
 { "name" : "Leslie Lamport", "name_en" : "Leslie Lamport" }

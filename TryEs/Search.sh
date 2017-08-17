@@ -28,7 +28,7 @@ curl $ESADDR/ls/user/_search?pretty -d '{
 # Search Term
 curl -XPOST $ESADDR/ls/user/_search?pretty -d '{
   "query": {
-    "term" : { "name_en" : "" } 
+    "term" : { "name" : "尼康D90" }
   }
 }
 '
