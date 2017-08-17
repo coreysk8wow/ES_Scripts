@@ -6,14 +6,13 @@ curl $ESADDR/ls/user?pretty -d '{
 }'
 
 curl $ESADDR/ls/user/_mget?pretty -d '{
-  "ids" : ["1-6"]
+  "ids" : ["1", "2", "3", "4"]
 }'
 
 curl $ESADDR/ls/user/_search?pretty -d '{
   "query" : {
     "query_string" : {
-      "query" : "tcr Adv",
-      "operator"
+      "query" : "LIU Shun"
     }
   }
 }'
@@ -24,3 +23,12 @@ curl $ESADDR/ls/user/_search?pretty -d '{
     "match_all" : {}
   }
 }'
+
+
+# Search Term
+curl -XPOST $ESADDR/ls/user/_search?pretty -d '{
+  "query": {
+    "term" : { "name_en" : "" } 
+  }
+}
+'
