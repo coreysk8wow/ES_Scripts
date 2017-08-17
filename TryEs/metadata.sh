@@ -62,3 +62,9 @@ curl -XGET '$ESADDR/_cat'
 
 curl -XGET $ESADDR/_cat/shards?v
 curl -XGET $ESADDR/_cat/nodes?v
+
+
+# Check metadata
+curl -XGET 'localhost:9200/_cluster/state?filter_path=metadata.indices.ls.mappings&pretty'
+equals to
+curl -XGET 'localhost:9200/ls/_mappings?pretty'
